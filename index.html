@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Votre Nom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Portfolio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link active">Accueil</a></li>
+                <li><a href="#quick-access" class="nav-link">CV & Certificat</a></li>
+                <li><a href="#about" class="nav-link">A Propos</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">Bonjour, je suis</div>
+                    <h1 class="hero-name">
+                        <span class="name-part">Fedi</span>
+                        <span class="name-part accent">Ben Hadj Fraj</span>
+                    </h1>
+                    <div class="hero-title">Étudiant en Informatique</div>
+                    <p class="hero-description">
+                        Passionné par le développement web et les nouvelles technologies. 
+                        Je crée des expériences numériques modernes et innovantes.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="public/portfolio.png" alt="Photo de profil" class="profile-image">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-access" id="quick-access">
+        <div class="container">
+            <div class="quick-cards">
+                <div class="quick-card cv-card" onclick="openCVModal()">
+                    <div class="card-icon">
+                        <i class="fas fa-file-user"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Mon CV</h3>
+                        <p>Consultez mon parcours</p>
+                    </div>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="quick-card certificates-card" onclick="openAllCertificatesModal()">
+                    <div class="card-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Mes Certificats</h3>
+                        <p>Voir toutes mes certifications</p>
+                    </div>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">À propos</h2>
+                    <p>
+                        Actuellement étudiant en informatique, je me spécialise dans le développement 
+                        avec une passion pour les technologies modernes et l'innovation.
+                    </p>
+                    <div class="skills-container">
+    
+                        <div class="skill-category">
+                            <h4>Technologies Web</h4>
+                            <div class="skills">
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">PHP</span><br>
+                                <span class="skill-tag">BOOTSTRAP</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Développement</h4>
+                            <div class="skills">
+                                <span class="skill-tag">PYTHON</span>
+                                <span class="skill-tag">JAVA</span>
+                                <span class="skill-tag">MATLAB</span>
+                                <span class="skill-tag">MY SQL</span>
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">C#</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Technologies</h4>
+                            <div class="skills">
+                                <span class="skill-tag">SQL ORACLE</span>
+                                <span class="skill-tag">GITHUB</span>
+                                <span class="skill-tag">UNITY</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projets Sélectionnés</h2>
+                <p class="section-subtitle">Découvrez mes réalisations récentes</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card large" onclick="openProjectModal('project1')">
+                    <div class="project-image">
+                        <img src="public/main1.png" alt="Application Web de Gestion">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Site web de recommandations hotels restaurants et salles de reunion</h3>
+                                <p>Site Web de recommandations</p>
+                                <div class="project-tech">
+                                    <span>PHP</span>
+                                    <span>JavaScript</span>
+                                    <span>MySQL</span>
+                                    <span>PYTHON</span>
+                                    <span>CSS</span>
+                                    <span>BOOTSTRAP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProjectModal('project2')">
+                    <div class="project-image">
+                        <img src="public/first.jpeg" alt="Site E-commerce">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Jeux Video</h3>
+                                <p>Jeux video developper par Unity</p>
+                                <div class="project-tech">
+                                    <span>C#</span>
+                                    <span>Unity</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProjectModal('project3')">
+                    <div class="project-image">
+                        <img src="public/tictactoe.png" alt="Application Mobile">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Pierre, feuille, ciseaux</h3>
+                                <p>Pierre, feuille, ciseaux</p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>Min-Max</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h2 class="section-title">Contactez-moi</h2>
+                    <p>N'hésitez pas à me contacter pour discuter de vos projets</p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>fedi.benhadjfraj1@gmail.com</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/FediBHF?tab=repositories" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <div id="cvModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="cv-modal-content">
+                <div class="cv-header">
+                    <h2>Mon Curriculum Vitae</h2>   
+                    <a href="public/FEDI_BEN_HADJ_FRAJ_CV.pdf" class="btn btn-primary" target="_blank" download="public/FEDI_BEN_HADJ_FRAJ_CV.pdf">
+                        <i class="fas fa-download"></i>
+                        Télécharger PDF
+                    </a>
+                </div>
+                <div class="cv-image-container">
+                    <img src="public/FEDI_BEN_HADJ_FRAJ_CV1.jpg" alt="Mon CV" class="cv-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="certificatesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="certificates-modal-content">
+                <h2>Mes Certificats</h2>
+                <div class="certificates-grid">
+                    <div class="certificate-item" >
+                        <div class="certificate-image">
+                            <img src="public/English.jpg">
+                        </div>
+                        <div class="certificate-details">
+                            <h3>Imperial English UK</h3>
+                            <p> Certificat d'anglais- 2025</p>
+                            <a href="public/English.pdf" class="btn btn-secondary" target="_blank" download="public/English.pdf">Télécharger PDF</a>
+                        </div>
+                    </div>
+                    <div class="certificate-item" >
+                        <div class="certificate-image">
+                            <img src="public/nuitd.png">
+                        </div>
+                        <div class="certificate-details">
+                            <h3>Certification Nuit D'info</h3>
+                            <p>Horizon - 2024</p>
+                            <a href="public/Nuit_D'info.pdf" class="btn btn-secondary" target="_blank" download="public/Nuit_D'info.pdf">Télécharger PDF</a>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-image">
+                            <img src="public/WordPress-1.png">
+                        </div>
+                        <div class="certificate-details">
+                            <h3>WordPress</h3>
+                            <p>Coursera - 2024</p>
+                            <a href="public/WordPress-1.png" target="_blank" class="btn btn-secondary" download="WordPress-1.pdf">Télécharger PDF</a>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-image">
+                            <img src="public/powerpoint-1.png">
+                        </div>
+                        <div class="certificate-details">
+                            <h3>Power Point</h3>
+                            <p>Coursera - 2024</p>
+                            <a href="public/powerpoint-1.png" target="_blank" class="btn btn-secondary" download="powerpoint.pdf">Télécharger PDF</a>
+                        </div>
+                    </div>
+                     <div class="certificate-item">
+                        <div class="certificate-image">
+                            <img src="public/microsoft excel-1.png">
+                        </div>
+                        <div class="certificate-details">
+                            <h3>Microsoft Excel</h3>
+                            <p>Coursera - 2024</p>
+                            <a href="public/microsoft excel-1.png" target="_blank" class="btn btn-secondary" download="microsoftexcel.pdf">Télécharger PDF</a>
+                        </div>
+                    </div>
+                     <div class="certificate-item">
+                        <div class="certificate-image">
+                            <img src="public/microsoft word-1.png">
+                        </div>
+                        <div class="certificate-details">
+                            <h3>Microsoft Word</h3>
+                            <p>Coursera - 2024</p>
+                            <a href="public/microsoft word-1.png" target="_blank" class="btn btn-secondary" download="microsoft word.pdf">Télécharger PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="certificateImageModal" class="modal">
+        <div class="modal-content certificate-image-modal">
+            <span class="close">&times;</span>
+            <div id="certificateImageContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
